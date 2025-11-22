@@ -519,6 +519,10 @@ HOW IT WORKS + WHY IT'S GREAT
                             color: black;
                         }
 
+                        .category-box a:hover {
+                            color: white;
+                        }
+
                         .shop-cta-wrapper {
                         display: flex;
                         justify-content: center;
