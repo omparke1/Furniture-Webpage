@@ -9,12 +9,22 @@
     
 /* Navigation */
     nav {
-    background-color: #e6e6e6;
     padding: 15px 30px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 1rem;
+    background-color: white;
     }
+
+    nav a{
+        text-decoration: none;
+        color: black;
+    }
+
+    nav a:hover{
+        color: white;
+    }
+
     nav .logo img {
     height: 50px;
     }
@@ -198,90 +208,125 @@ HOW IT WORKS + WHY IT'S GREAT
     text-decoration: none;
     color: #000;
     }
-/* Base Reset */
     * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
-
+    
     body {
         font-family: Arial, Helvetica, sans-serif;
         background: #ffffff;
         color: #222;
         line-height: 1.5;
-        }
-        
-    /***************************
-    NAVIGATION BAR
-    ***************************/
-        nav {
-        width: 100%;
-        background: #e6e6e6;
-        padding: 16px 28px;
+    }
+    
+    /* NAVIGATION BAR */
+    header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        }
-        
-        nav .logo img {
-        height: 48px;
-        }
-        
-        nav ul {
+        background: white;
+        padding: 16px 40px;
+    }
+    
+    header .logo h2 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #222;
+    }
+    
+    nav ul {
         display: flex;
         gap: 24px;
         list-style: none;
-        }
-        
-        nav ul li a {
+    }
+    
+    nav ul li a {
         text-decoration: none;
         color: #222;
         font-weight: 600;
-        }
+    }
+    
         
     /***************************
     HERO SECTION
     ***************************/
-        .hero-section {
+    .hero-section {
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
         background: #f2f2f2;
         padding: 60px 40px;
         gap: 40px;
-        }
-        .hero-text h1 {
-            margin-bottom: 12px;
-            font-size: 32px;
-            }
+    }
+    
+    .hero-text h1 {
+        margin-bottom: 12px;
+        font-size: 32px;
+    }
+    
+    .hero-text p {
+        max-width: 450px;
+        margin-bottom: 20px;
+    }
+    
+    .cta-button {
+        display: inline-block;
+        background: #333; /* dark gray */
+        color: white;
+        padding: 12px 20px; /* padding around button */
+        text-decoration: none; /* remove underline */
+        border-radius: 6px;
+        font-weight: bold;
+    }
+    
+    .hero-image img {
+        width: 100%;
+        border-radius: 8px;
+    }
             
-            .hero-text p {
-            max-width: 450px;
-            margin-bottom: 20px;
-            }
-            
-            .cta-button {
-            display: inline-block;
-            background: #333;
-            color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            }
-            
-            .hero-image img {
-            width: 100%;
-            border-radius: 8px;
-            }
-            
+    #home-page {
+        padding-top: 2rem;
+        padding-left: 2.5rem;
+        background-color: #e6e6e6;
+        padding-bottom: 3rem;
+    }
+
+    #home-page h1 {
+        padding-right: 17rem;
+    }
+
+    #home-page p {
+        padding-right: 16rem;
+        margin-bottom: 1rem;
+    }
+
+    #home-page a {
+        display: block;
+        margin: 15px 0 0;
+        background: #333;
+        color: white;
+        padding: 12px 20px;
+        text-decoration: none;
+        width: fit-content;
+        border-radius: 6px;
+      }
+
+      #home-page-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      #home-page-img {
+        margin-top: 5rem;
+      }
             /***************************
             BEST SELLING PRODUCTS
             ***************************/
             #best-selling-products {
             text-align: center;
-            padding: 60px 40px;
+            padding: 40px 40px;
             }
             
             #best-selling-products h2 {
@@ -311,59 +356,85 @@ HOW IT WORKS + WHY IT'S GREAT
                 }
                 
                 .add-cart-btn {
-                display: inline-block;
-                margin-top: 10px;
-                background: #333;
-                color: white;
-                padding: 10px 16px;
-                text-decoration: none;
-                border-radius: 5px;
-                font-weight: bold;
+                    display: inline-block;
+                    margin-top: 5px;
+                    background: #333;
+                    color: white;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    text-align: center;
+                
+                    /* Add these lines */
+                    height: 42px;         /* fixed height */
+                    line-height: 22px;    /* vertically center text */
                 }
                 
+
                 /***************************
                 HOW IT WORKS + WHY IT'S GREAT
                 ***************************/
-                #how-it-works-wrapper {
-                background: #f2f2f2;
-                padding: 60px 40px;
-                }
-                
-                .two-column-grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 40px;
-                max-width: 1100px;
-                margin: auto;
-                }
-                
-                #how-it-works h2,
-                #how-it-works p {
-                margin-bottom: 16px;
-                }
-                
-                #how-it-works .cta-button {
-                margin-top: 12px;
-                }
-                
-                #why-its-great {
-                background: #e0e0e0;
-                padding: 24px;
-                border-radius: 8px;
-                }
-                
-                #why-its-great h2 {
-                margin-bottom: 16px;
-                }
-                
-                #why-its-great ol {
-                padding-left: 20px;
-                }
+                .how-why-container {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr; /* two equal columns */
+                    gap: 40px;                      /* space between left and right */
+                    max-width: 1100px;
+                    margin: 0 auto;
+                    padding: 40px;
+                  }
+                  
+                  /* HOW IT WORKS - left column */
+                  #how-it-works {
+                    padding-left: 20px; /* space from left edge */
+                  }
+                  
+                  #how-it-works h2,
+                  #how-it-works p {
+                    margin-bottom: 16px;
+                  }
+                  
+                  #how-it-works .cta-button,
+                  #how-it-works a.cta-button {
+                    display: inline-block;
+                    padding: 12px 20px;
+                    background: #333;      /* dark gray */
+                    color: #fff;
+                    text-decoration: none; /* remove underline */
+                    border-radius: 6px;
+                    margin-top: 12px;
+                  }
 
-                #why-its-great li {
+                  #how-it-works a {
+                    display: block;
+                    margin: 15px 0 0;
+                    background: #333;
+                    color: white;
+                    padding: 12px 20px;
+                    text-decoration: none;
+                    width: fit-content;
+                    border-radius: 6px;
+                  }
+                  
+                  /* WHY IT’S GREAT - right column */
+                  #why-its-great {
+                    background: #e0e0e0;
+                    padding: 24px;
+                    border-radius: 8px;
+                  }
+                  
+                  #why-its-great h2 {
+                    margin-bottom: 16px;
+                  }
+                  
+                  #why-its-great ol {
+                    padding-left: 20px;
+                  }
+                  
+                  #why-its-great li {
                     margin-bottom: 12px;
-                    }
-                    
+                  }
+                  
                     /***************************
                     REVIEWS SECTION
                     ***************************/
@@ -438,7 +509,7 @@ HOW IT WORKS + WHY IT'S GREAT
                         }
                         
                         .category-box {
-                        background-color: rgb(121, 119, 119);
+                        background-color: rgb(165, 165, 165);
                         padding: 24px;
                         text-align: center;
                         }
