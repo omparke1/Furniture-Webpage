@@ -259,46 +259,57 @@ HOW IT WORKS + WHY IT'S GREAT
         font-weight: bold;
     }
     
-    .hero-image img {
-        width: 100%;
-        border-radius: 8px;
-    }
-            
-    #home-page {
-        padding-top: 2rem;
-        padding-left: 2.5rem;
-        background-color: #e6e6e6;
-        padding-bottom: 3rem;
-    }
+  /* make the hero section a positioning context */
+  #home-page-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 60px 40px;
+    margin-bottom: 12rem;
+  }
+  
+  /* Text container stays above image */
+  #home-page {
+    position: relative;
+    z-index: 5;  
+    margin-left: 2rem;    /* TEXT ABOVE */
+  }
+  
+  /* Proper selector: #home-page-img (NOT #home-page-image) */
+  #home-page-img {
+    position: absolute;     /* image positioned behind text */
+    top: 55%;
+    right: 65px;
+    transform: translateY(-50%);
+    width: 38%;
+    z-index: 1;             /* IMAGE BELOW */
+    pointer-events: none;   /* don’t block clicks */
+  }
+  
+  /* Image styling */
+  #home-page-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(12,12,30,0.08);
+  }
+  
+  /* Optional: dark overlay for readability */
+  #home-page-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.15));
+    border-radius: 8px;
+    z-index: 2;
+  }
 
-    #home-page h1 {
-        padding-right: 17rem;
-    }
-
-    #home-page p {
-        padding-right: 16rem;
-        margin-bottom: 1rem;
-    }
-
-    #home-page a {
-        display: block;
-        margin: 15px 0 0;
-        background: #333;
-        color: white;
-        padding: 12px 20px;
-        text-decoration: none;
-        width: fit-content;
-        border-radius: 6px;
-      }
-
-      #home-page-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-
-      #home-page-img {
-        margin-top: 5rem;
-      }
+  #home-page a {
+    position: absolute;
+    top: 11rem;
+  }
             /***************************
             BEST SELLING PRODUCTS
             ***************************/
@@ -309,6 +320,17 @@ HOW IT WORKS + WHY IT'S GREAT
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+.product-btn {
+    background: #5d4d2a;
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 13.5pt; 
+}
+
 /* When visible */
 .product-item.show {
     opacity: 1;
@@ -317,11 +339,14 @@ HOW IT WORKS + WHY IT'S GREAT
 
             #best-selling-products {
             text-align: center;
-            padding: 40px 40px;
+            padding: 25px 40px 99px 40px;
+            background: #d0c6ba;
+            margin: 4rem 0 0 0 ;
             }
             
             #best-selling-products h2 {
-            margin-bottom: 30px;
+            margin-bottom: 15px;
+            margin-top: 0 0 1rem 0;
             }
             
             .product-grid {
@@ -336,6 +361,7 @@ HOW IT WORKS + WHY IT'S GREAT
             padding: 20px;
             border-radius: 8px;
             text-align: left;
+            height: 27rem;
             }
 
             .product-item img {
@@ -361,6 +387,10 @@ HOW IT WORKS + WHY IT'S GREAT
                     height: 42px;         /* fixed height */
                     line-height: 22px;    /* vertically center text */
                 }
+
+                #best-selling-products{
+                    margin-top: 23px;
+                }
                 
 
                 /***************************
@@ -370,21 +400,29 @@ HOW IT WORKS + WHY IT'S GREAT
                     display: grid;
                     grid-template-columns: 1fr 1fr; /* two equal columns */
                     gap: 40px;                      /* space between left and right */
-                    max-width: 1100px;
+                    max-width: 1422px;
                     margin: 0 auto;
-                    padding: 40px;
+                    padding: 50px 40px 75px 40px;
+                    border: black solid 2px;
                   }
                   
                   /* HOW IT WORKS - left column */
                   #how-it-works {
-                    padding-left: 20px; /* space from left edge */
+                    padding-left: 225px;
+                    margin-top: .20rem; /* space from left edge */
                   }
                   
                   #how-it-works h2,
                   #how-it-works p {
                     margin-bottom: 16px;
+                    margin-right: 3rem;
                   }
-                  
+
+                  #best-selling-products a {
+                    position: absolute;
+                    top: 23rem;
+                  }
+
                   #how-it-works .cta-button,
                   #how-it-works a.cta-button {
                     display: inline-block;
@@ -410,12 +448,18 @@ HOW IT WORKS + WHY IT'S GREAT
                   /* WHY IT’S GREAT - right column */
                   #why-its-great {
                     background: #e0e0e0;
-                    padding: 24px;
+                    padding: 42px 24px 24px 24px;
                     border-radius: 8px;
+                    margin-right: 16rem;
+                    position: absolute;
+                    left: 42rem;
+                    height: 45%;
                   }
                   
                   #why-its-great h2 {
-                    margin-bottom: 16px;
+                    margin-bottom: -25px;
+                    position: absolute;
+                    top: 0.3rem;
                   }
                   
                   #why-its-great ol {
@@ -423,7 +467,7 @@ HOW IT WORKS + WHY IT'S GREAT
                   }
                   
                   #why-its-great li {
-                    margin-bottom: 12px;
+                    margin-bottom: 9px;
                   }
                   
                     /***************************
@@ -432,10 +476,17 @@ HOW IT WORKS + WHY IT'S GREAT
                     #reviews {
                     text-align: center;
                     padding: 60px 40px;
+                    margin-bottom: 3rem;
                     }
 
                     #reviews h2 {
                         padding-bottom: 1rem;
+                    }
+
+                    #reviews a {
+                        position: absolute;
+                        top: 118rem;
+                        left: 38rem;
                     }
                     
                     .reviews-grid {
@@ -445,7 +496,7 @@ HOW IT WORKS + WHY IT'S GREAT
                     }
                     
                     .review-box {
-                    background: #f2f2f2;
+                   background: #cdd9cf;
                     width: 280px;
                     padding: 20px;
                     border-radius: 8px;
@@ -472,8 +523,8 @@ HOW IT WORKS + WHY IT'S GREAT
                     SHOP BY CATEGORY
                     ***************************/
                     #shop-categories {
-                    background: #e0e0e0;
-                    padding: 60px 40px;
+                   background: #d0c6ba;
+                    padding: 60px 40px 80px 40px;
                     text-align: center;
                     }
                     
@@ -490,17 +541,18 @@ HOW IT WORKS + WHY IT'S GREAT
                         #shop-categories h2 {
                             padding-bottom: 1rem;
                         }
+
                         
                         .category-grid {
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
                         gap: 5px;
                         max-width: 600px;
-                        margin: 0 auto;
+                        margin: 0 auto 1rem auto;
                         }
                         
                         .category-box {
-                        background-color: rgb(165, 165, 165);
+                        background-color: rgb(93, 75, 50);
                         padding: 24px;
                         text-align: center;
                         }
