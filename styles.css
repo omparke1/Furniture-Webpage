@@ -348,6 +348,11 @@ HOW IT WORKS + WHY IT'S GREAT
     transform: translateY(0);
 }
 
+.product-item.show #sofa {
+    width: 16rem;
+    margin: -11px -6px 0px -24px;
+}
+
             #best-selling-products {
             text-align: center;
             padding: 25px 40px 99px 40px;
