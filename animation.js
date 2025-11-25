@@ -61,4 +61,18 @@ window.addEventListener("scroll", animateImageOnScroll);
 
 // Fire once at load (optional)
 animateImageOnScroll();
+
+const reviewBoxes = document.querySelectorAll(".review-box");
+
+    window.addEventListener("scroll", () => {
+        const scrollPos = window.scrollY;
+
+        reviewBoxes.forEach((box, index) => {
+            // Each card moves slightly differently (parallax effect)
+            const speed = (index + 1.5) * 9;  // adjust to control movement
+            const offset = scrollPos / speed;
+
+            box.style.transform = `translateX(-${offset}px)`;
+        });
+    });
 });
