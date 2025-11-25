@@ -36,4 +36,29 @@ document.addEventListener("DOMContentLoaded", () => {
   
       ctaButtons.forEach(btn => ctaObserver.observe(btn));
     }
-  });
+   /* ---------- Home-page image scroll animation ---------- */
+const image = document.querySelector("#home-page-img");
+
+function animateImageOnScroll() {
+    const scrollY = window.scrollY;
+    const maxScroll = 400; // adjust as needed
+
+    // progress from 0 → 1
+    const progress = Math.min(scrollY / maxScroll, 1);
+
+    // Scale 1 → 1.3
+    const scaleValue = 1 + progress * 0.3;
+
+    // Fade 1 → 0
+    const opacityValue = 1 - progress;
+
+    image.style.transform = `translateY(-50%) scale(${scaleValue})`;
+    image.style.opacity = opacityValue;
+}
+
+// Fire on scroll
+window.addEventListener("scroll", animateImageOnScroll);
+
+// Fire once at load (optional)
+animateImageOnScroll();
+});
