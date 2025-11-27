@@ -1,7 +1,208 @@
-@media (min-width: 600px) {
+@media (min-width: 500px) {
+/* Global */
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
 }
 
-@media (min-width: 900px) {
+header h2 {
+    margin-left: 1rem;
+
+}
+
+nav {
+    display: flex;
+    flex-direction: row;         /* 🔥 side-by-side */
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 33px;
+    width: 85%;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+    background: lightgray;
+border-radius: 10px;
+width: 15%;
+text-align: center;
+    
+}
+
+nav .logo img {
+    height: 40px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;         /* 🔥 horizontal links */
+    gap: 16px;                   /* spacing between menu items */
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* HERO SECTION */
+#home-page-grid {
+    grid-template-columns: 1fr;
+    padding: 25px 20px;
+    margin-bottom: 3rem;
+}
+
+#home-page {
+    margin: 0;
+    position: relative;
+    z-index: 10;
+}
+
+#home-page-img {
+    position: relative;
+    width: 40%;
+    height: 20%;
+    right: 40%;
+    top: 100px;
+    transform: none;
+    margin: 20px auto 0 auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#home-page a {
+    position: static;
+    margin-top: 20px;
+    text-decoration: none;
+    background: black;
+    color: white;
+    padding: .5rem;
+    border-radius: 5px;
+}
+
+#best-selling-products {
+    padding: 0px 20px;
+    margin-top: -13rem;
+}
+
+#best-selling-products h2 {
+    text-align: center;
+}
+/* MOBILE: 1 column (first product, then 4 under it) */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;   /* Forces a single column */
+    gap: 20px;
+}
+
+/* Product container styling */
+.product-item {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;       /* Stack image → text → button */
+    align-items: center;          /* Center everything horizontally */
+    text-align: center;
+    padding: 20px 20px 25px 20px;
+    background: #d0c6ba;
+    border-radius: 8px;
+    margin-left: 3rem;
+}
+
+/* Product Image */
+.product-item img {
+    width: 50%;                   /* Centered + smaller image */
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Buy Button (example class) */
+.product-item.show a {
+    margin-top: 15px;
+    align-self: center;           /* Ensure button stays centered */
+}
+
+/* HOW IT WORKS + WHY IT'S GREAT */
+.how-why-container {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    position: relative;
+}
+
+#how-it-works {
+    padding-left: 0;
+    margin-top: 0;
+}
+
+#why-its-great {
+    position: relative;
+    left: 0;
+    margin: 20px 0 0 0;
+    width: 100%;
+    height: auto;
+}
+
+#why-its-great h2 {
+    position: relative;
+    margin-bottom: 10px;
+    top: 0;
+}
+
+/* REVIEWS */
+#reviews {
+    padding: 40px 20px;
+}
+
+.reviews-grid {
+    flex-direction: column;
+    gap: 20px;
+}
+
+#reviews a {
+    position: static;
+    margin: 20px auto 0 auto;
+}
+
+/* SHOP BY CATEGORY */
+#shop-categories {
+    padding: 40px 20px;
+}
+
+.category-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 100%;
+}
+
+/* FOOTER */
+footer {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.footer-links {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-left, .footer-right {
+    width: 100%;
+}
+
+.footer-socials a {
+    font-size: 20px;
+}
+}
+
+
+@media (min-width: 1000px) {
     .info-sections {
         grid-template-columns: 1fr; /* switch to one column */
         padding: 40px 25px;
@@ -14,7 +215,7 @@
     }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1180px) {
 * {
     margin: 0;
     padding: 0;
