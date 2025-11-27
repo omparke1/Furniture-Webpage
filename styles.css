@@ -366,16 +366,24 @@ footer {
 }
 }
 
+@media (min-width: 450px) {
+    #home-page-img img {
+        position: relative;
+        height: 20%;
+        right: 40%;
+        top: 20px;
+    }
+}
 
-@media (min-width: 620px) and (max-width: 1000px) {
+
+@media (min-width: 600px) {
 
    /* HERO IMAGE */
    #home-page-img img {
     position: relative;
     height: 20%;
     right: 40%;
-    top: 45px;
-    width: 50%;
+    top: 25px;
 }
 
 /* SECTION CONTAINER */
@@ -385,15 +393,17 @@ footer {
     text-align: center;
 }
 
+
 /* PRODUCT GRID (2 columns between 620px–1000px) */
 .product-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
     align-items: start;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 0 auto 1rem 2rem;
+
 }
 
 /* PRODUCT ITEM */
@@ -407,14 +417,39 @@ footer {
     flex-direction: column;
     text-align: center;
     align-items: center;
+
+    /* Make every card equal height */
+    height: 100%;
 }
 
-/* PRODUCT IMAGE */
+/* Make text box stretch to equal height */
+.product-text {
+    flex: 1;                 /* forces equal height across items */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Ensure images don’t stretch oddly */
 .product-item img {
     width: 60%;
     max-height: 220px;
     object-fit: cover;
     margin-bottom: 15px;
+}
+
+/* Keep button at the bottom of every card */
+.product-item a {
+    margin-top: auto;        /* pushes button to the bottom */
+    width: 60%;
+    background: #5d4d2a;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 /* BUY BUTTON */
@@ -431,7 +466,7 @@ footer {
 }
 
 #why-its-great {
-    margin-top: 0rem;
+    margin-top: 2rem;
     margin-right: 10rem;
     font-size: 11pt;
 }
