@@ -1,5 +1,19 @@
-/* Base Reset */
-/* Base Reset */
+@media (min-width: 600px) {
+}
+
+@media (min-width: 900px) {
+    .info-sections {
+        grid-template-columns: 1fr; /* switch to one column */
+        padding: 40px 25px;
+    }
+
+    .why-great,
+    .how-it-works {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1095px) {
 * {
     margin: 0;
     padding: 0;
@@ -110,6 +124,7 @@ HOW IT WORKS + WHY IT'S GREAT
     background-color: #d9d9d9;
     padding: 20px;
     text-align: left;
+    border-radius: 8px;
     }
 
 /* REVIEWS */
@@ -381,17 +396,24 @@ HOW IT WORKS + WHY IT'S GREAT
             }
 
             .product-item img {
-                width: 88%;
-                height: 204px;
+                width: 99%;
+                height: 209px;
                 object-fit: cover;
                 border-radius: 15px;
-                margin: -9px 35px 1px 14px;
+                margin: -23px 10px 0px 0px;
                 padding: 1rem;
                 }
 
-                .product-item #sofa {
-                    width: 16rem;
-                    margin: -12px -11px 0 -23px
+                .product-item.show a {
+                    height: 10%;
+                    width: 84%;
+                    margin-top: 13px;
+                }
+
+                .product-item.show #sofa {
+                    width: 16.5rem;
+                    height: 13rem;
+                    margin: -22px -16px 0 -27px;
                 }
                 
                 #best-selling-products .add-cart-btn {
@@ -411,8 +433,10 @@ HOW IT WORKS + WHY IT'S GREAT
                 }
 
                 #best-selling-products{
-                    margin-top: 23px;
+                    margin-top: 13px;
                 }
+
+        
                 
 
                 /***************************
@@ -422,7 +446,7 @@ HOW IT WORKS + WHY IT'S GREAT
                     display: grid;
                     grid-template-columns: 1fr 1fr; /* two equal columns */
                     gap: 40px;                      /* space between left and right */
-                    max-width: 1422px;
+                    max-width: 1500px;
                     margin: 0 auto;
                     padding: 50px 40px 75px 40px;
                     border: black solid 2px;
@@ -469,7 +493,7 @@ HOW IT WORKS + WHY IT'S GREAT
                   
                   /* WHY IT’S GREAT - right column */
                   #why-its-great {
-                    background: #e9e9e9;
+                    background: #f1f1f0;
                     padding: 42px 24px 24px 24px;
                     border-radius: 8px;
                     margin-right: 16rem;
@@ -666,4 +690,5 @@ text-decoration: none;
 color: #222;
 margin-bottom: 6px;
 display: block;
+}
 }
