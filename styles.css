@@ -248,9 +248,17 @@ nav ul li a {
 .category-grid {
     grid-template-columns: 1fr;
     gap: 16px;
-    padding-bottom: 1.5rem; 
+    padding-bottom: .5rem; 
     max-width: 100%;
     text-align: center;
+}
+
+.category-box {
+    background: #5d4d2a;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    margin: 1rem;
+    color: white;
 }
 
 .category-box {
@@ -270,9 +278,25 @@ nav ul li a {
     color: gray;
 }
 
+#shop-categories .center-btn {
+    display: block;        /* allows auto margin centering */
+    margin: 0 auto 0 auto;
+    padding: 1rem 2rem;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    width: fit-content;    /* keeps button small */
+}
+
+#shop-categories .center-btn:hover {
+    color: gray;
+}
 
 /* FOOTER */
 footer {
+    position: relative;   /* allows absolute positioning inside */
     flex-direction: column;
     gap: 30px;
     padding: 40px 20px;
@@ -280,7 +304,57 @@ footer {
 
 .footer-links {
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+}
+
+.links-column h4 {
+    margin-left: 2.25rem;
+    margin-top: 0;
+    margin-top: 2.5rem;
+    line-height: .25;   /* tighter spacing */
+}
+
+
+.footer-links li {
+    text-decoration: none;
+    list-style: none;
+    text-align: left;
+    margin-right: 1rem;
+    padding-top: 0;
+}
+
+.footer-socials {
+    margin: .25rem;
+}
+
+.footer-socials a {
+    text-decoration: none;
+}
+
+.footer-logo, .footer-socials {
+    margin-left: 2.25rem;
+}
+
+.footer-contact {
+    position: absolute;
+    top: 80px;        /* distance from top */
+    right: 30px;      /* distance from right */
+}
+
+.contact-btn {
+    text-decoration: none;
+    background: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.footer-links li a {
+    line-height: 1;   /* reduces height between lines */
+    padding-top: 0.25rem;
+    margin-right: 2rem;
+    color: black;
+    text-decoration: none;
 }
 
 .footer-left, .footer-right {
@@ -293,17 +367,74 @@ footer {
 }
 
 
-@media (min-width: 900px) {
-    .info-sections {
-        grid-template-columns: 1fr; /* switch to one column */
-        padding: 40px 25px;
-    }
+@media (min-width: 620px) and (max-width: 1000px) {
 
-    #why-its-great {
-        margin-top: 0rem;
-        margin-right: 10rem;
-        font-size: 11pt;
-    }
+   /* HERO IMAGE */
+   #home-page-img img {
+    position: relative;
+    height: 20%;
+    right: 40%;
+    top: 45px;
+    width: 50%;
+}
+
+/* SECTION CONTAINER */
+#best-selling-products {
+    padding: 0px 30px 0 0px;
+    margin-top: -13rem;
+    text-align: center;
+}
+
+/* PRODUCT GRID (2 columns between 620px–1000px) */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* PRODUCT ITEM */
+.product-item {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #d0c6ba;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+/* PRODUCT IMAGE */
+.product-item img {
+    width: 60%;
+    max-height: 220px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* BUY BUTTON */
+.product-item.show a {
+    width: 60%;
+    margin-top: 15px;
+    align-self: center;
+}
+
+/* INFO SECTIONS – single column */
+.info-sections {
+    grid-template-columns: 1fr;
+    padding: 40px 25px;
+}
+
+#why-its-great {
+    margin-top: 0rem;
+    margin-right: 10rem;
+    font-size: 11pt;
+}
 }
 
 @media (min-width: 1180px) {
