@@ -7,13 +7,14 @@
         padding: 40px 25px;
     }
 
-    .why-great,
-    .how-it-works {
-        text-align: left;
+    #why-its-great {
+        margin-top: 0rem;
+        margin-right: 10rem;
+        font-size: 11pt;
     }
 }
 
-@media (min-width: 1095px) {
+@media (min-width: 1080px) {
 * {
     margin: 0;
     padding: 0;
@@ -111,20 +112,19 @@
 HOW IT WORKS + WHY IT'S GREAT
 ***************************/
 .info-sections {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: #f2f2f2;
-    padding: 50px;
-    gap: 30px;
-    }
+    grid-template-columns: 1fr;
+    padding: 40px 25px;
+}
     .how-it-works {
     text-align: left;
     }
+
     .why-great {
     background-color: #d9d9d9;
     padding: 20px;
     text-align: left;
     border-radius: 8px;
+    width: 60%;
     }
 
 /* REVIEWS */
