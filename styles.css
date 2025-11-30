@@ -57,9 +57,10 @@ nav ul li a {
 }
 
 #home-page {
-    margin: 0;
+    margin: 0 3rem 0 0;
     position: relative;
     z-index: 10;
+
 }
 
 #home-page-img {
@@ -120,9 +121,9 @@ nav ul li a {
 }
 
 .product-item h3 {
-    background: rgb(235, 232, 232);
     fill-opacity: 90%;
-    padding: .5rem;
+    padding: 0rem;
+    margin: 0;
     border-radius: 4px;
     width: 100%;
 }
@@ -135,6 +136,9 @@ nav ul li a {
     margin-bottom: 15px;
 }
 
+.product-item p {
+    margin: 1rem 1rem;
+}
 /* Buy Button (example class) */
 .product-item.show a {
     margin-top: 15px;
@@ -378,6 +382,11 @@ footer {
 
 @media (min-width: 600px) {
 
+    #home-page-img {
+        margin-top: 1rem;
+        Width: 35%;
+    }
+
    /* HERO IMAGE */
    #home-page-img img {
     position: relative;
@@ -386,11 +395,21 @@ footer {
     top: 25px;
 }
 
+#home-page {
+    margin: 0 25rem 0 0;
+}
+
+#sofa {
+    width: 89%;
+    height: 39%;
+}
+
 /* SECTION CONTAINER */
 #best-selling-products {
     padding: 0px 30px 0 0px;
     margin-top: -13rem;
     text-align: center;
+    margin: 0 2rem;
 }
 
 
@@ -398,11 +417,12 @@ footer {
 .product-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    column-gap: 30px;
+    row-gap: 60px;
     justify-content: center;
     align-items: start;
     max-width: 900px;
-    margin: 0 auto 1rem 2rem;
+    margin: 0 auto 2.5rem 2rem;
 
 }
 
@@ -442,7 +462,7 @@ footer {
 
 /* Keep button at the bottom of every card */
 .product-item a {
-    margin-top: auto;        /* pushes button to the bottom */
+    margin-top: 1rem;        /* pushes button to the bottom */
     width: 60%;
     background: #5d4d2a;
     color: white;
@@ -450,6 +470,7 @@ footer {
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
+
 }
 
 /* BUY BUTTON */
@@ -465,33 +486,44 @@ footer {
     padding: 40px 25px;
 }
 
+.how-why-container {
+    margin: 0 7.5rem;
+}
+
 #why-its-great {
     margin-top: 2rem;
     margin-right: 10rem;
     font-size: 11pt;
 }
+
+.reviews-grid {
+    margin: 0 0 0 29rem;
+}
 }
 
-@media (min-width: 1180px) {
+@media (min-width: 1000px) {
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    width: 100%;
     }
     
 /* Navigation */
     nav {
-    padding: 15px 30px;
+    padding: 0rem 0rem;
+    margin: 0 0 0 -10rem;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1px;
     background-color: white;
     }
 
     nav a{
         text-decoration: none;
         color: black;
+        background: none;
     }
 
     nav a:hover{
