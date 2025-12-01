@@ -784,7 +784,7 @@ HOW IT WORKS + WHY IT'S GREAT
   /* Proper selector: #home-page-img (NOT #home-page-image) */
   #home-page-img {
     position: absolute;     /* image positioned behind text */
-    top: 65%;
+    top: 0%;
     right: 65px;
     transform: translateY(-50%);
     width: 45%;
@@ -803,7 +803,7 @@ HOW IT WORKS + WHY IT'S GREAT
 
   #home-page-img {
     position: absolute;
-    top: 65%;
+    top: 0%;
     right: 65px;
     transform: translateY(-50%) scale(1);
     width: 45%;
@@ -813,14 +813,7 @@ HOW IT WORKS + WHY IT'S GREAT
   }
   
   /* Optional: dark overlay for readability */
-  #home-page-img::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.15));
-    border-radius: 8px;
-    z-index: 2;
-  }
+
 
   #home-page a {
     position: absolute;
