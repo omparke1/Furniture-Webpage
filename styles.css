@@ -957,16 +957,18 @@ HOW IT WORKS + WHY IT'S GREAT
                     display: grid;
                     grid-template-columns: 1fr 1fr; /* two equal columns */
                     gap: 40px;                      /* space between left and right */
-                    max-width: 1500px;
-                    margin: 0 auto;
+                    max-width: 108%;
+                    margin: 0;
                     padding: 50px 40px 75px 40px;
                     border: black solid 2px;
+                    width: 100%;
                   }
                   
                   /* HOW IT WORKS - left column */
                   #how-it-works {
                     width: 100%; /* space from left edge */
                     margin-top: 2rem;
+                    margin-left: 2rem;
                   }
                   
                   #how-it-works h2 {
@@ -1027,43 +1029,51 @@ HOW IT WORKS + WHY IT'S GREAT
                     REVIEWS SECTION
                     ***************************/
                     #reviews {
-                    text-align: center;
-                    padding: 50px 40px 20px 40px;
-                    margin-bottom: 3rem;
+                        margin: 0 auto;
+                        text-align: center;
+                        padding: 50px 40px 20px 50px;
+                        margin-bottom: 3rem;
                     }
-
+                    
                     #reviews h2 {
                         padding-bottom: 1rem;
                     }
                     
                     .reviews-grid {
-                    display: flex;
-                    justify-content: center;
-                    gap: 24px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        gap: 24px;
+                        width: 100%;
+                        margin: 0 auto;
+                    
+                        flex-wrap: nowrap;   /* <- keeps them in a single row */
                     }
                     
                     .review-box {
-                   background: #f1f1f0;
-                    width: 280px;
-                    padding: 20px;
-                    border-radius: 8px;
-                    text-align: left;
+                        background: #f1f1f0;
+                        width: 280px;
+                        padding: 20px;
+                        border-radius: 8px;
+                        text-align: left;
+                    
+                        flex-shrink: 0;      /* <- prevents shrinking into a column */
                     }
                     
                     .review-box .stars {
-                    font-size: 18px;
-                    margin-bottom: 10px;
+                        font-size: 18px;
+                        margin-bottom: 10px;
                     }
                     
                     .cta-review {
-                    display: block;
-                    margin: 30px auto 0;
-                    background: #333;
-                    color: white;
-                    padding: 12px 20px;
-                    text-decoration: none;
-                    width: fit-content;
-                    border-radius: 6px;
+                        display: block;
+                        margin: 30px auto 0;
+                        background: #333;
+                        color: white;
+                        padding: 12px 20px;
+                        text-decoration: none;
+                        width: fit-content;
+                        border-radius: 6px;
                     }
                     
                     /***************************
