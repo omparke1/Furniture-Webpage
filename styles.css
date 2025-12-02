@@ -794,22 +794,27 @@ HOW IT WORKS + WHY IT'S GREAT
   
   /* Image styling */
   #home-page-img img {
-    width: 100%;
-    height: auto;
+    width: 135%;
+    height: 25rem;
     display: block;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(12,12,30,0.08);
+    top: 15px;
   }
 
   #home-page-img {
     position: absolute;
-    top: 0%;
-    right: 65px;
+    top: 0;
+    right: -65px;
     transform: translateY(-50%) scale(1);
     width: 45%;
     z-index: 1;
     pointer-events: none;
     opacity: 1;
+  }
+
+  #home-page h1, p {
+    width: 77%;
   }
   
   /* Optional: dark overlay for readability */
@@ -822,105 +827,93 @@ HOW IT WORKS + WHY IT'S GREAT
             /***************************
             BEST SELLING PRODUCTS
             ***************************/
-            /* Start hidden */
-.product-item {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.product-btn {
-    background: #5d4d2a;
-    color: white;
-    padding: 10px 16px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    text-align: center;
-    font-size: 13.5pt; 
-}
-
-/* When visible */
-.product-item.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.product-item.show #sofa {
-    width: 16rem;
-    margin: -11px -6px 0px -24px;
-}
-
             #best-selling-products {
-            text-align: center;
-            padding: 25px 40px 99px 40px;
-            background: #d0c6ba;
-            margin: 4rem 0 0 0 ;
+                text-align: center;
+                padding: 25px 40px 80px 0;
+                background: #d0c6ba;
+                margin-top: 4rem;
+                margin-left: 0;
             }
             
             #best-selling-products h2 {
-            margin-bottom: 15px;
-            margin-top: 0 0 1rem 0;
+                margin-bottom: 20px;
             }
             
+            /* PRODUCT GRID — horizontal row */
             .product-grid {
-            display: flex;
-            gap: 24px;
-            justify-content: center;
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                flex-wrap: nowrap;  /* Keeps them in a single horizontal row */
             }
             
+            /* PRODUCT CARD */
             .product-item {
-            width: 250px;
-            background: #f2f2f2;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: left;
-            height: 27rem;
+                width: 250px;
+                background: #f2f2f2;
+                padding: 20px;
+                border-radius: 8px;
+            
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            
+                height: 27rem; /* All cards same height */
+                overflow: hidden;
             }
-
+            
+            /* PRODUCT IMAGE (same size for all) */
             .product-item img {
-                width: 99%;
-                height: 209px;
+                width: 100%;
+                height: 180px;
                 object-fit: cover;
-                border-radius: 15px;
-                margin: -23px 10px 0px 0px;
-                padding: 1rem;
-                }
-
-                .product-item.show a {
-                    height: 10%;
-                    width: 84%;
-                    margin-top: 13px;
-                }
-
-                .product-item.show #sofa {
-                    width: 16.5rem;
-                    height: 13rem;
-                    margin: -22px -16px 0 -27px;
-                }
-                
-                #best-selling-products .add-cart-btn {
-                    display: inline-block;
-                    margin-top: 5px;
-                    background: #333;
-                    color: white;
-                    padding: 10px 16px;
-                    text-decoration: none;
-                    border-radius: 5px;
-                    font-weight: bold;
-                    text-align: center;
-                
-                    /* Add these lines */
-                    height: 42px;         /* fixed height */
-                    line-height: 22px;    /* vertically center text */
-                }
-
-                #best-selling-products{
-                    margin-top: 13px;
-                }
-
-        
-                
+                border-radius: 10px;
+                margin-bottom: 12px;
+            }
+            
+            /* PRODUCT TITLE */
+            .product-item h3 {
+                margin-bottom: 10px;
+            }
+            
+            /* PRODUCT TEXT — equalized spacing */
+            .product-item p {
+                flex-grow: 1;   /* Pushes button to bottom */
+                padding: 0 10px;
+            }
+            
+            /* ADD TO CART BUTTON */
+            .product-btn {
+                background: #5d4d2a;
+                color: white;
+                padding: 12px 16px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                font-size: 13pt;
+            
+                display: block;
+                width: 80%;
+                margin: 10px auto 0 auto; /* centers horizontally */
+                text-align: center;
+            }
+            
+            /* VIEW MORE BUTTON */
+            #best-selling-products .add-cart-btn {
+                margin-top: 1rem;
+                background: #333;
+                color: white;
+                padding: 12px 20px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: bold;
+            
+                display: block;
+                width: 150px;
+                margin-left: auto;
+                margin-right: auto;
+            }
 
                 /***************************
                 HOW IT WORKS + WHY IT'S GREAT
@@ -949,7 +942,8 @@ HOW IT WORKS + WHY IT'S GREAT
 
                   #best-selling-products a {
                     position: absolute;
-                    top: 23rem;
+                    top: 72rem;
+                    margin: 0 auto;
                   }
 
                   #how-it-works .cta-button,
