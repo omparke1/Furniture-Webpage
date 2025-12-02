@@ -1157,7 +1157,7 @@ color: #222;
     transform: scale(1);
     position: relative;
     top: -2rem;
-    left: 62rem;
+    float: right;
 }
 
 .footer-contact a:hover {
