@@ -1157,7 +1157,7 @@ color: #222;
     transform: scale(1);
     position: relative;
     top: -2rem;
-    left: 50rem;
+    left: 62rem;
 }
 
 .footer-contact a:hover {
@@ -1175,7 +1175,7 @@ gap: 40px;
 }
 
 .footer-links h4 {
-margin-bottom: 10px;
+margin-bottom: 15px;
 }
 
 .footer-links ul {
@@ -1187,5 +1187,6 @@ text-decoration: none;
 color: #222;
 margin-bottom: 6px;
 display: block;
+margin-left: 2.25rem;
 }
 }
