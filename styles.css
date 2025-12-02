@@ -847,10 +847,11 @@ HOW IT WORKS + WHY IT'S GREAT
             ***************************/
             #best-selling-products {
                 text-align: center;
-                padding: 25px 40px 80px 0;
+                padding: 25px 0 80px 0;
                 background: #d0c6ba;
                 margin-top: 4rem;
                 margin-left: 0;
+                width: 100%;
             }
             
             #best-selling-products h2 {
