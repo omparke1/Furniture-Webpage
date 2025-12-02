@@ -104,6 +104,7 @@ nav ul li a {
     display: grid;
     grid-template-columns: 1fr;   /* Forces a single column */
     gap: 20px;
+    margin-bottom: 2rem;
 }
 
 /* Product container styling */
@@ -152,8 +153,8 @@ nav ul li a {
     /* Ensure button stays centered */
 }
 
-.add-cart-btn {
- margin-left: 2.5rem;
+.view-more {
+ margin: 0 0 0 7.5rem;
  text-decoration: none;
  background: black;
  color: white;
@@ -162,6 +163,17 @@ nav ul li a {
  border-radius: 10px;
  text-align: center;
 }
+
+.add-cart-btn {
+    margin: 0 0 0 7.5rem;
+    text-decoration: none;
+    background: black;
+    color: white;
+    padding: 1rem;
+    width: 50%;
+    border-radius: 10px;
+    text-align: center;
+   }
 
 /* HOW IT WORKS + WHY IT'S GREAT */
 .how-why-container {
@@ -377,6 +389,12 @@ footer {
         right: 40%;
         top: 20px;
     }
+
+    .view-more {
+        width: 100%;
+        margin: 0 7rem 0 11rem;
+    }
+
 }
 
 
@@ -422,7 +440,7 @@ footer {
     justify-content: center;
     align-items: start;
     max-width: 900px;
-    margin: 0 auto 2.5rem 2rem;
+    margin: 0 -2rem 4rem 1rem;
 
 }
 
@@ -822,7 +840,7 @@ HOW IT WORKS + WHY IT'S GREAT
 
   #home-page a {
     position: absolute;
-    top: 11rem;
+    top: 14rem;
   }
             /***************************
             BEST SELLING PRODUCTS
@@ -844,29 +862,15 @@ HOW IT WORKS + WHY IT'S GREAT
                 display: flex;
                 gap: 20px;
                 justify-content: center;
-                flex-wrap: nowrap;  /* Keeps them in a single horizontal row */
-            }
-            
-            /* PRODUCT CARD */
-            .product-item {
-                width: 250px;
-                background: #f2f2f2;
-                padding: 20px;
-                border-radius: 8px;
-            
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            
-                height: 27rem; /* All cards same height */
-                overflow: hidden;
+                flex-wrap: nowrap; 
+                margin: 0 auto; /* Keeps them in a single horizontal row */
+                height: 100%;
             }
             
             /* PRODUCT IMAGE (same size for all) */
             .product-item img {
-                width: 100%;
-                height: 180px;
+                width: 81%;
+                height: 135px;
                 object-fit: cover;
                 border-radius: 10px;
                 margin-bottom: 12px;
@@ -874,33 +878,63 @@ HOW IT WORKS + WHY IT'S GREAT
             
             /* PRODUCT TITLE */
             .product-item h3 {
-                margin-bottom: 10px;
+                margin-bottom: 5px;
             }
             
             /* PRODUCT TEXT — equalized spacing */
-            .product-item p {
-                flex-grow: 1;   /* Pushes button to bottom */
-                padding: 0 10px;
+            .product-item {
+                width: 250px;
+                background: #f2f2f2;
+                padding: 20px;
+                padding-bottom: 40px; /* Makes space for button */
+                border-radius: 8px;
+            
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            
+                height: 30rem;
+                overflow: hidden;
             }
             
-            /* ADD TO CART BUTTON */
+            .product-item p {
+                flex-grow: 1; /* Pushes button down */
+                width: 93%;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+
+            #sofa {
+                width: 103%
+            }
+            
             .product-btn {
                 background: #5d4d2a;
                 color: white;
-                padding: 12px 16px;
+                padding: 2px;
                 text-decoration: none;
                 border-radius: 5px;
                 font-weight: bold;
                 font-size: 13pt;
             
+                width: 100%;
                 display: block;
-                width: 80%;
-                margin: 10px auto 0 auto; /* centers horizontally */
-                text-align: center;
+            
+                margin-left: auto;
+                margin-right: auto;
+                align-self: center;  /* Ensures centering */
+            }
+
+            .product-item.show a {
+                width: 100%;
+                padding: .5rem;
+                position: relative;
+                top: 16px;
             }
             
             /* VIEW MORE BUTTON */
-            #best-selling-products .add-cart-btn {
+            #best-selling-products .view-more {
                 margin-top: 1rem;
                 background: #333;
                 color: white;
@@ -930,20 +964,18 @@ HOW IT WORKS + WHY IT'S GREAT
                   
                   /* HOW IT WORKS - left column */
                   #how-it-works {
-                    padding-left: 225px;
-                    margin-top: .20rem; /* space from left edge */
+                    width: 100%; /* space from left edge */
+                    margin-top: 2rem;
                   }
                   
-                  #how-it-works h2,
-                  #how-it-works p {
+                  #how-it-works h2 {
                     margin-bottom: 16px;
                     margin-right: 3rem;
                   }
 
-                  #best-selling-products a {
-                    position: absolute;
-                    top: 72rem;
-                    margin: 0 auto;
+                  #how-it-works p {
+                    width: 100%;
+                    margin-right: 2rem;
                   }
 
                   #how-it-works .cta-button,
@@ -971,22 +1003,19 @@ HOW IT WORKS + WHY IT'S GREAT
                   /* WHY IT’S GREAT - right column */
                   #why-its-great {
                     background: #f1f1f0;
-                    padding: 42px 24px 24px 24px;
+                    background: #f1f1f0;
+                    padding: 5px 30px;
                     border-radius: 8px;
-                    margin-right: 16rem;
-                    position: absolute;
-                    left: 42rem;
-                    height: 45%;
+                    width: 100%;
                   }
                   
                   #why-its-great h2 {
-                    margin-bottom: -25px;
-                    position: absolute;
-                    top: 0.3rem;
+                    margin-bottom: 20px;
                   }
                   
                   #why-its-great ol {
                     padding-left: 20px;
+                    width: 135%;
                   }
                   
                   #why-its-great li {
@@ -998,18 +1027,12 @@ HOW IT WORKS + WHY IT'S GREAT
                     ***************************/
                     #reviews {
                     text-align: center;
-                    padding: 60px 40px;
+                    padding: 50px 40px 20px 40px;
                     margin-bottom: 3rem;
                     }
 
                     #reviews h2 {
                         padding-bottom: 1rem;
-                    }
-
-                    #reviews a {
-                        position: absolute;
-                        top: 118rem;
-                        left: 38rem;
                     }
                     
                     .reviews-grid {
@@ -1069,8 +1092,9 @@ HOW IT WORKS + WHY IT'S GREAT
                         .category-grid {
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
-                        gap: 5px;
-                        max-width: 600px;
+                        column-gap: 40px;
+                        row-gap: 0px;
+                        max-width: 100%;
                         margin: 0 auto 1rem auto;
                         }
                         
@@ -1128,16 +1152,12 @@ text-decoration: none;
 color: #222;
 }
 
-.footer-contact {
-display: inline-block;
-margin: 16px 0;
-background: #333;
-color: white;
-padding: 10px 18px;
-text-decoration: none;
-border-radius: 5px;
-margin-top: 0;
-margin-bottom: 2rem;
+.footer-contact .add-cart-btn.animate-in {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    top: -2rem;
+    left: 50rem;
 }
 
 .footer-contact a:hover {
