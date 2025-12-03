@@ -847,7 +847,7 @@ HOW IT WORKS + WHY IT'S GREAT
             ***************************/
             #best-selling-products {
                 text-align: center;
-                padding: 25px 0 80px 0;
+                padding: 25px 0 25px 0;
                 background: #d0c6ba;
                 margin-top: 4rem;
                 margin-left: 0;
@@ -873,18 +873,21 @@ HOW IT WORKS + WHY IT'S GREAT
                 width: 81%;
                 height: 135px;
                 object-fit: cover;
-                border-radius: 10px;
-                margin-bottom: 12px;
+                border-radius: 5px;
+                margin-bottom: 22px;
+                background: radial-gradient(
+                    circle,
+                    rgb(165 159 159 / 76%) 0%, rgb(204 201 201 / 45%) 50%, rgba(242, 242, 242, 0) 100%);
             }
             
             /* PRODUCT TITLE */
             .product-item h3 {
-                margin-bottom: 5px;
+                margin-bottom: 3px;
             }
             
             /* PRODUCT TEXT — equalized spacing */
             .product-item {
-                width: 250px;
+                width: 20rem;
                 background: #f2f2f2;
                 padding: 20px;
                 padding-bottom: 40px; /* Makes space for button */
@@ -895,10 +898,14 @@ HOW IT WORKS + WHY IT'S GREAT
                 justify-content: flex-start;
                 align-items: center;
             
-                height: 30rem;
+                height: 20rem;
                 overflow: hidden;
             }
             
+            #sofa {
+                height: 10rem;
+            }
+
             .product-item p {
                 flex-grow: 1; /* Pushes button down */
                 width: 93%;
@@ -907,7 +914,7 @@ HOW IT WORKS + WHY IT'S GREAT
             }
 
             #sofa {
-                width: 103%
+                width: 119%
             }
             
             .product-btn {
@@ -931,7 +938,11 @@ HOW IT WORKS + WHY IT'S GREAT
                 width: 100%;
                 padding: .5rem;
                 position: relative;
-                top: 16px;
+                top: -2px;
+            }
+
+            .product-item.show .stars {
+                margin-top: .25rem;
             }
             
             /* VIEW MORE BUTTON */
@@ -1169,6 +1180,7 @@ color: #222;
     position: relative;
     top: -2rem;
     float: right;
+    margin-left: 2rem;
 }
 
 .footer-contact a:hover {
